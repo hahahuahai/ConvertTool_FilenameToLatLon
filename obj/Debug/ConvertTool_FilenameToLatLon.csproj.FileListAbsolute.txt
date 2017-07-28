@@ -1,0 +1,10 @@
+c:\users\huahai\documents\visual studio 2013\Projects\ConvertTool_FilenameToLatLon\ConvertTool_FilenameToLatLon\bin\Debug\ConvertTool_FilenameToLatLon.exe.config
+c:\users\huahai\documents\visual studio 2013\Projects\ConvertTool_FilenameToLatLon\ConvertTool_FilenameToLatLon\obj\Debug\ConvertTool_FilenameToLatLon.csprojResolveAssemblyReference.cache
+c:\users\huahai\documents\visual studio 2013\Projects\ConvertTool_FilenameToLatLon\ConvertTool_FilenameToLatLon\obj\Debug\ConvertTool_FilenameToLatLon.Form_Main.resources
+c:\users\huahai\documents\visual studio 2013\Projects\ConvertTool_FilenameToLatLon\ConvertTool_FilenameToLatLon\obj\Debug\ConvertTool_FilenameToLatLon.PicNumModel.form.Form_PicNum.resources
+c:\users\huahai\documents\visual studio 2013\Projects\ConvertTool_FilenameToLatLon\ConvertTool_FilenameToLatLon\obj\Debug\ConvertTool_FilenameToLatLon.Properties.Resources.resources
+c:\users\huahai\documents\visual studio 2013\Projects\ConvertTool_FilenameToLatLon\ConvertTool_FilenameToLatLon\obj\Debug\ConvertTool_FilenameToLatLon.csproj.GenerateResource.Cache
+c:\users\huahai\documents\visual studio 2013\Projects\ConvertTool_FilenameToLatLon\ConvertTool_FilenameToLatLon\bin\Debug\ConvertTool_FilenameToLatLon.exe
+c:\users\huahai\documents\visual studio 2013\Projects\ConvertTool_FilenameToLatLon\ConvertTool_FilenameToLatLon\bin\Debug\ConvertTool_FilenameToLatLon.pdb
+c:\users\huahai\documents\visual studio 2013\Projects\ConvertTool_FilenameToLatLon\ConvertTool_FilenameToLatLon\obj\Debug\ConvertTool_FilenameToLatLon.exe
+c:\users\huahai\documents\visual studio 2013\Projects\ConvertTool_FilenameToLatLon\ConvertTool_FilenameToLatLon\obj\Debug\ConvertTool_FilenameToLatLon.pdb
