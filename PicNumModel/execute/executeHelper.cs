@@ -157,13 +157,13 @@ namespace ConvertTool_FilenameToLatLon.PicNumModel.execute
             try
             {
 
-                //判断LineNumber_100的值是I还是J。因为江苏省的纬度范围是30°45′N-35°20′N，I表示28°N-32°N，J表示32°N-36°N。
-                if (string.Compare(LineNumber_100, "I") == 0)//等于I
+                //判断LineNumber_100的值是H还是I。因为江苏省的纬度范围是30°45′N-35°20′N，H表示28°N-32°N，I表示32°N-36°N。
+                if (string.Compare(LineNumber_100, "H") == 0)//等于H
                 {
                     latitudeLongitude_100_maxminModel.FileLatitudeMax_100 = 32;
                     latitudeLongitude_100_maxminModel.FileLatitudeMin_100 = 28;
                 }
-                else if (string.Compare(LineNumber_100, "J") == 0)//等于J
+                else if (string.Compare(LineNumber_100, "I") == 0)//等于I
                 {
                     latitudeLongitude_100_maxminModel.FileLatitudeMax_100 = 36;
                     latitudeLongitude_100_maxminModel.FileLatitudeMin_100 = 32;
@@ -199,7 +199,7 @@ namespace ConvertTool_FilenameToLatLon.PicNumModel.execute
         }
 
         /// <summary>
-        /// 得到实际比例尺下的小矩形信息，根据比例尺代码。【核心算法，步骤二】
+        /// 得到1幅实际比例尺下的图幅信息，根据比例尺代码。【核心算法，步骤二】
         /// </summary>
         /// <param name="scaleCode"></param>
         /// <returns></returns>
