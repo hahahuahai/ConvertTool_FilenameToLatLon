@@ -19,11 +19,13 @@ namespace ConvertTool_FilenameToLatLon.PicNumModel.execute
             try
             {
                 List<string> list_FileName = new List<string>();
+                List<FileNameModel> list_FileNameModel = new List<FileNameModel>();
                 List<PictureNumberModel> list_PictureNumberModel = new List<PictureNumberModel>();
                 List<LatitudeLongitude_Final_maxminModel> list_LatitudeLongitude_Final_maxminModel = new List<LatitudeLongitude_Final_maxminModel>();
 
                 list_FileName = getAllFileName(InputFolderPath);//得到所有文件名
-                list_PictureNumberModel = getAllPictureNumber(list_FileName);//得到所有文件名的图幅号5个参数
+                list_FileNameModel = getAllPictureNumFileName(list_FileName);//得到所有文件名里面的图幅号
+                list_PictureNumberModel = getAllPictureNumber(list_FileNameModel);//得到所有文件名的图幅号5个参数
                 list_LatitudeLongitude_Final_maxminModel = getAllLatitudeLongitude_Final(list_PictureNumberModel);//得到最终结果
                 //npoiHelper.CreateExcel(OutputFolderPath, list_LatitudeLongitude_Final_maxminModel);//输出到Excel
                 txtHelper.txtExecute(OutputFolderPath, list_LatitudeLongitude_Final_maxminModel);//输出到TXT文件
@@ -57,18 +59,45 @@ namespace ConvertTool_FilenameToLatLon.PicNumModel.execute
         }
 
         /// <summary>
+        /// 将最初的文件名分解，提取出图幅号。
+        /// </summary>
+        /// <param name="list_FileName"></param>
+        /// <returns></returns>
+        public static List<FileNameModel> getAllPictureNumFileName(List<string> list_FileName)
+        {
+            List<FileNameModel> list_FileNameModel = new List<FileNameModel>();
+            try
+            {
+                FileNameModel filenamemodel;
+                 foreach (string FileName in list_FileName)
+                 {
+                     filenamemodel = new FileNameModel();
+                     filenamemodel.FullFileName = FileName;
+                     filenamemodel.PictureNumFileName = FileName.Substring(0, 10);//因为图幅号是10位，所以截取前10位。针对的是文件名前10位是图幅号的文件。
+                     list_FileNameModel.Add(filenamemodel);
+                 }
+            }
+            catch (System.Exception ex)
+            {
+            	
+            }
+            
+            return list_FileNameModel;
+        }
+
+        /// <summary>
         /// 分解所有文件名，得到图幅号的5个参数
         /// </summary>
         /// <param name="list_FileName"></param>
         /// <returns></returns>
-        public static List<PictureNumberModel> getAllPictureNumber(List<string> list_FileName)
+        public static List<PictureNumberModel> getAllPictureNumber(List<FileNameModel> list_FileName)
         {
             List<PictureNumberModel> list_picturenumbermodel = new List<PictureNumberModel>();
             try
             {
 
                 PictureNumberModel picturenumbermodel = new PictureNumberModel();
-                foreach (string FileName in list_FileName)
+                foreach (FileNameModel FileName in list_FileName)
                 {
                     picturenumbermodel = PictureNumberModel.getPicNumberModel(FileName);
                     list_picturenumbermodel.Add(picturenumbermodel);

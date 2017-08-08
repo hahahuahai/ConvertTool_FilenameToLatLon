@@ -61,17 +61,17 @@ namespace ConvertTool_FilenameToLatLon.PicNumModel.model
         /// </summary>
         /// <param name="filename"></param>
         /// <returns></returns>
-        public static PictureNumberModel getPicNumberModel(string filename)
+        public static PictureNumberModel getPicNumberModel(FileNameModel filename)
         {
             PictureNumberModel picturenumbermodel = new PictureNumberModel();
             try
             {
-                picturenumbermodel.FileName = filename;//文件名
-                picturenumbermodel.LineNumber_100 = filename.Substring(0, 1);//1：100万行号
-                picturenumbermodel.ColumnNumber_100 = filename.Substring(1, 2);//1:100万列号
-                picturenumbermodel.ScaleCode = filename.Substring(3, 1);//比例尺代码
-                picturenumbermodel.PicLineNumber = filename.Substring(4, 3);//图幅行号数字码
-                picturenumbermodel.PicColumnNumber = filename.Substring(7, 3);//图幅号数字码
+                picturenumbermodel.FileName = filename.FullFileName;//文件名
+                picturenumbermodel.LineNumber_100 = filename.PictureNumFileName.Substring(0, 1);//1：100万行号
+                picturenumbermodel.ColumnNumber_100 = filename.PictureNumFileName.Substring(1, 2);//1:100万列号
+                picturenumbermodel.ScaleCode = filename.PictureNumFileName.Substring(3, 1);//比例尺代码
+                picturenumbermodel.PicLineNumber = filename.PictureNumFileName.Substring(4, 3);//图幅行号数字码
+                picturenumbermodel.PicColumnNumber = filename.PictureNumFileName.Substring(7, 3);//图幅号数字码
 
             }
             catch (System.Exception ex)

@@ -59,6 +59,7 @@
     <Compile Include="PicNumModel\form\Form_PicNum.Designer.cs">
       <DependentUpon>Form_PicNum.cs</DependentUpon>
     </Compile>
+    <Compile Include="PicNumModel\model\FileNameModel.cs" />
     <Compile Include="PicNumModel\model\LatitudeLongitude_100_maxminModel.cs" />
     <Compile Include="PicNumModel\model\PictureNumberModel.cs" />
     <Compile Include="PicNumModel\model\LatitudeLongitude_Final_maxminModel.cs" />
